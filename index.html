@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BattFEEry - Choose location</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="landing">
+        <img src="logo.jpg" alt="BattFEEry" class="top-logo">
+        <h1>Where do you want to rent?</h1>
+        <p class="subtitle">Choose a BattFEEry station. Each one has its own 24 power banks.</p>
+        <div class="loc-grid" id="locationGrid">
+            <button type="button" class="loc-card" data-loc="library">
+                <strong>Library</strong>
+                <small>MCU Library station</small>
+                <span class="loc-count" aria-live="polite"></span>
+            </button>
+            <button type="button" class="loc-card" data-loc="lrc">
+                <strong>LRC</strong>
+                <small>Learning Resource Center station</small>
+                <span class="loc-count" aria-live="polite"></span>
+            </button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

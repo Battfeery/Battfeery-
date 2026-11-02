@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BattFEEry - Log in</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-needs-loc>
+    <main class="container">
+        <div class="form-container">
+            <form id="loginForm" novalidate>
+                <img src="logo.jpg" alt="BattFEEry" class="top-logo">
+                <h1>Welcome back</h1>
+                <p class="subtitle">Log in to rent a power bank</p>
+                <p class="loc-chip">Location: <strong id="locName"></strong> · <a href="index.html">Change</a></p>
+
+                <p class="form-error" id="formError" role="alert" hidden></p>
+
+                <label class="sr-only" for="loginId">MCU email or ID number</label>
+                <input type="text" id="loginId" placeholder="MCU school email or ID no." autocomplete="username" required>
+
+                <div class="password-field">
+                    <label class="sr-only" for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Password" autocomplete="current-password" required>
+                    <button type="button" class="toggle-pass" aria-label="Show password" data-target="loginPassword">Show</button>
+                </div>
+
+                <button type="submit" class="primary-btn">Log in</button>
+            </form>
+        </div>
+
+        <aside class="overlay-container">
+            <div class="overlay-panel">
+                <h2 class="brand-name">BATTFEERY</h2>
+                <p class="tagline">CHARGE • GO • DO MORE</p>
+                <p class="description">No account yet? Sign up with your MCU details to start renting.</p>
+                <a href="signup.html" class="ghost">Create account</a>
+            </div>
+        </aside>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

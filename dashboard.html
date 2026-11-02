@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BattFEEry - Rent a power bank</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dash-body">
+    <main class="dashboard-container">
+        <header class="dashboard-header">
+            <div>
+                <h1>Hi, <span id="userNameDisplay">Centralino</span></h1>
+                <p>Rent a power bank in three steps: color, hours, payment.</p>
+                <p class="loc-chip">Location: <strong id="locName"></strong> <a href="index.html" id="changeLoc">Change location</a></p>
+            </div>
+            <button class="logout-btn" id="logoutBtn" type="button">Log out</button>
+        </header>
+
+        <p class="done-msg" id="doneMsg" role="status" hidden></p>
+        <section id="bookView"></section>
+        <section id="activeView" hidden aria-live="polite"></section>
+        <section id="statusView" class="status-section" aria-label="Power bank availability"></section>
+    </main>
+
+    <div class="modal-overlay" id="qrModal" hidden>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <h2 id="modalTitle">Scan to pay</h2>
+            <p id="modalSubtitle"></p>
+            <div class="pay-tabs" role="group" aria-label="Payment method">
+                <button type="button" class="pay-tab active" data-method="qr" aria-pressed="true">InstaPay QR</button>
+                <button type="button" class="pay-tab" data-method="cash" aria-pressed="false">Cash slot</button>
+            </div>
+            <p class="price-text" id="modalAmount"></p>
+            <div id="qrPanel" class="qr-placeholder"><img src="qr.jpg" alt="InstaPay QR code"><p class="pay-help">Scan with GCash, Maya or your bank app and pay the exact amount.</p></div>
+            <div id="cashPanel" class="cash-panel" hidden>
+                <p class="cash-icon" aria-hidden="true">₱</p>
+                <ol><li>Go to the BattFEEry machine.</li><li>Insert the exact amount in the cash slot.</li><li>Tap "Cash inserted" here once the machine accepts it.</li></ol>
+            </div>
+            <p class="warning-text" id="modalNote"></p>
+            <div class="modal-actions">
+                <button class="close-btn" id="closeModalBtn" type="button">Cancel</button>
+                <button class="primary-btn" id="confirmPayBtn" type="button">I've paid</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

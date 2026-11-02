@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BattFEEry - Sign up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-needs-loc>
+    <main class="container">
+        <div class="form-container">
+            <form id="signupForm" novalidate>
+                <img src="logo.jpg" alt="BattFEEry" class="top-logo small">
+                <h1>Create account</h1>
+                <p class="subtitle">Register to rent a BattFEEry power bank</p>
+                <p class="loc-chip">Location: <strong id="locName"></strong> · <a href="index.html">Change</a></p>
+
+                <p class="form-error" id="formError" role="alert" hidden></p>
+
+                <input type="text" name="fullName" placeholder="Full name" autocomplete="name" aria-label="Full name" required>
+                <input type="tel" name="contactNo" placeholder="Contact no. (09XX XXX XXXX)" autocomplete="tel" aria-label="Contact number" required>
+                <input type="email" name="schoolEmail" placeholder="MCU school email" autocomplete="email" aria-label="MCU school email" required>
+                <input type="text" name="idNo" placeholder="Student / employee no." aria-label="Student or employee number" required>
+                <div class="password-field">
+                    <input type="password" name="password" id="signupPassword" placeholder="Create password (min. 6 characters)" autocomplete="new-password" aria-label="Password" required>
+                    <button type="button" class="toggle-pass" aria-label="Show password" data-target="signupPassword">Show</button>
+                </div>
+
+                <fieldset class="radio-group">
+                    <legend class="label-text">I am a</legend>
+                    <label><input type="radio" name="role" value="student" required> Student</label>
+                    <label><input type="radio" name="role" value="employee"> Employee</label>
+                </fieldset>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#" id="termsLink">Terms and Conditions</a></label>
+                </div>
+
+                <button type="submit" class="primary-btn">CREATE ACCOUNT</button>
+            </form>
+        </div>
+
+        <aside class="overlay-container">
+            <div class="overlay-panel">
+                <h2 class="brand-name">BATTFEERY</h2>
+                <p class="tagline">CHARGE • GO • DO MORE</p>
+                <p class="description">Already have an account?</p>
+                <a href="login.html" class="ghost">Log in</a>
+            </div>
+        </aside>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
